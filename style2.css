@@ -1,0 +1,361 @@
+* {
+    word-wrap: break-word;
+    white-space: normal;
+}
+main {
+    position: relative;
+    background-color: rgb(2, 0, 5);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.bar img {
+    top: 0;
+    position: absolute;
+    width: 98vw;
+    pointer-events: none;
+}
+
+.trending {
+    top: 10%;
+    position: absolute;
+    left: 8%;
+    color: white;
+}
+
+.gallery {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 75vw;
+}
+
+.image {
+
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.image::-webkit-scrollbar {
+    height: 6px;
+    background-color: transparent;
+}
+
+.image::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    min-width: 100px;
+    width: 25vw;
+    max-width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    aspect-ratio: 2/3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    z-index: 2;
+}
+
+.card:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.leftscroll {
+    position: absolute;
+    color: rgb(150, 150, 150);
+    display: inline-block;
+    padding: 0.5rem;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 17%;
+    border-radius: 0.5rem;
+    top: 27%;
+    right: 90.5%;
+    background: rgb(25, 25, 25);
+}
+
+.rightscroll {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 17%;
+    position: absolute;
+    color: rgb(150, 150, 150);
+    display: inline-block;
+    padding: 0.5rem;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    top: 27%;
+    left: 86.5%;
+    background: rgb(25, 25, 25);
+}
+
+.leftscroll:hover,
+.rightscroll:hover {
+    background: rgb(50, 50, 50);
+    color: rgb(200, 200, 200);
+}
+
+.morereason {
+    position: absolute;
+    top: 63.5%;
+    left: 8%;
+    color: white;
+}
+
+.reason {
+    padding: 0;
+    top: 69.5%;
+    width: 81.5%;
+    position: absolute;
+
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    left: 8%;
+    border-radius: 0.3rem;
+    min-height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.reason1,
+.reason2,
+.reason3,
+.reason4 {
+    border-radius: 1.5rem;
+    background-color: rgb(30, 20, 30);
+    background-image: linear-gradient(to right bottom, #19193c, #1f1733, #21152b, #201424, #1e141e);
+    position: absolute;
+    height: 290px;
+    width: 24%;
+
+    overflow: hidden;
+
+}
+
+.reason1 {
+    left: 0;
+}
+
+.reason2 {
+    left: 25.2%;
+}
+
+.reason3 {
+    left: 50.4%;
+}
+
+.reason4 {
+    left: 75.6%;
+}
+
+.reason1 span,
+.reason3 span,
+.reason4 span {
+    word-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 9%;
+    left: 5%;
+    width: 95%;
+    height: 25%;
+    font-weight: 600;
+    font-family: Helvetica, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: white;
+}
+
+.reason2 span {
+    word-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 9%;
+    left: 5%;
+    width: 95%;
+    height: 25%;
+    font-weight: 600;
+    font-family: Helvetica, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: white;
+}
+
+.reason1 p,
+.reason3 p,
+.reason4 p {
+    display: inline-block;
+    white-space: normal;
+    width: 90%;
+    height: 22%;
+    word-wrap: break-word;
+    position: absolute;
+    font-size: 1rem;
+    top: 23%;
+    left: 5%;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: rgb(200, 200, 200);
+}
+
+.reason2 p {
+    display: inline-block;
+    white-space: normal;
+    width: 90%;
+    height: 20%;
+    word-wrap: break-word;
+    position: absolute;
+    font-size: 1rem;
+    top: 33%;
+    left: 5%;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: rgb(200, 200, 200);
+}
+
+.reason1 p:hover,
+.reason2 p:hover,
+.reason3 p:hover,
+.reason4 p:hover {
+    color: white;
+}
+
+#computer,
+#download,
+#watch,
+#kids {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        padding: 1.5rem;
+    }
+
+    .image-scroller {
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 1450px) {
+    .reason {
+        display: flex;
+        flex-direction: row;
+        height: 600px;
+        row-gap: 1rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .reason1 {
+        top: 0;
+        left: 5%;
+        width: 40%;
+
+    }
+
+    .reason2 {
+        top: 0;
+        left: 55%;
+        width: 40%;
+
+
+    }
+
+    .reason3 {
+        left: 5%;
+        bottom: 0;
+        width: 40%;
+
+    }
+
+    .reason4 {
+        bottom: 0;
+        left: 55%;
+        width: 40%;
+    }
+}
+
+@media (max-width: 750px) {
+
+
+
+    .reason {
+        display: flex;
+        flex-direction: row;
+        height: 1200px;
+        row-gap: 1rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .reason1 {
+        top: 0;
+        left: 5%;
+        width: 80%;
+
+    }
+
+    .reason2 {
+        top: 25%;
+        left: 5%;
+        width: 80%;
+
+
+    }
+
+    .reason3 {
+        left: 5%;
+        top: 50%;
+        width: 80%;
+
+    }
+
+    .reason4 {
+        top: 75%;
+        left: 5%;
+        width: 80%;
+    }
+}

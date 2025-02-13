@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('fonsts/helvetica-neue-5/HelveticaNeueBlack.otf');
+
+* {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+footer {
+
+    min-height: 150vh;
+    position: relative;
+    top: 13.5vh;
+    color: white;
+}
+
+footer h2 {
+    position: absolute;
+    left: 8%;
+    color: white;
+}
+
+.faq-container {
+    top: 3%;
+    left: 8%;
+    position: absolute;
+    width: 81%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.faq-item {
+    margin-bottom: 0.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-input {
+    display: none;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    background: #2d2d2d;
+    padding: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.question:hover {
+    background: #3d3d3d;
+}
+
+.question h3 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.question svg {
+    min-width: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.answer {
+    border: solid 2px black;
+    height: 0vh;
+    width: 100%;
+    overflow: hidden;
+    background: #2d2d2d;
+    ;
+    transition: all 0.3s ease-out;
+    transform-origin: top;
+}
+
+.answer p {
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+.faq-input:checked~.question {
+    background: #404040;
+}
+
+.faq-input:checked~.question svg {
+    transform: rotate(45deg);
+}
+
+.faq-input:checked~.answer {
+    height: 34vh;
+    animation: slideDown 0.3s ease-out;
+}
+
+
+.endbox {
+   top: 0;
+
+}
+
+
+
+.ending {
+    margin-top: 8rem;
+    position: relative;
+    width: 80vw;
+    height: 55vh;
+
+}
+
+.ending .endq {
+    position: absolute;
+    top: 7rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgb(200, 200, 200);
+}
+
+.end {
+
+    margin-top: 4vh;
+    position: absolute;
+    top: 8rem;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.end a {
+
+    display: inline-block;
+    color: rgb(150, 150, 150);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.end a:hover {
+    color: white;
+}
+
+.endeng{
+    position: absolute;
+    top:  80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.last p {
+    color: rgb(200, 200, 200);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        width: 90%;
+    }
+
+    .question h3 {
+        font-size: 1.2rem;
+    }
+
+    .question svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .answer h2 {
+        font-size: 1rem;
+    }
+    .endeng{
+        position: relative;
+        top:  90%;
+    }
+}
+
+
+@media (max-width: 600px){
+    .end a{
+    font-family: 0.2rem;
+    gap: 1rem;
+ }
+}
+
+
+
+@media (max-width: 1475px){
+    footer{
+        position: relative;
+        top: 50vh;
+    }
+}
+
+@media (max-width: 750px){
+    footer{
+        position: relative;
+        top: 130vh;
+    }
+}
